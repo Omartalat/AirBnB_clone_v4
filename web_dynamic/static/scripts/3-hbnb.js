@@ -20,3 +20,20 @@ $(function () {
     }
   });
 });
+
+$(function () {
+  $.ajax({
+    url: "http://0.0.0.0:5001/api/v1/places_search/",
+    type: "POST",
+    ContentType: "application/json",
+    data: JSON.stringify({}),
+    success: function (response) {
+      for (r in response) {
+        
+      }
+    },
+    error: function (error) {
+      console.error(error);
+    }
+  });
+});
